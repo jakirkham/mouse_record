@@ -17,7 +17,7 @@ setup(
     name="mouse_recorder",
     version="0.0.1",
     description="An Event Triggered Recorder",
-    url="https://github.com/bnhwa/mouse_record"
+    url="https://github.com/bnhwa/mouse_record",
     license="GPLv3",
     author="Bailey Hwa",
     author_email="hwab@janelia.hhmi.org",
