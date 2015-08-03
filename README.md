@@ -22,6 +22,7 @@ Additionally, the program requires installation of `setuptools`; the link to the
 # Usage
 
 Once desired arguments are provided by the user -recording times-before and after in seconds- and directory, the program will initiate. Simply run `docker run -it <NAME>`. This will start up `bash`. In the case of an automated build, `<NAME>` is `jakirkham/ubuntu_conda`.
+Once the program is running, please run the program for at least 40 seconds (to allow the program to prevent extra seconds from entering the buffer).
 
 
 ##Sample Usage
