@@ -23,5 +23,6 @@ setup(
     author_email="hwab@janelia.hhmi.org",
     scripts=glob("bin/*"),
     packages=find_packages(),
+    install_requires=["picamera >=1.0"],
     zip_safe=True
 )
