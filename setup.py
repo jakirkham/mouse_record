@@ -22,5 +22,6 @@ setup(
     author="Bailey Hwa",
     author_email="hwab@janelia.hhmi.org",
     scripts=glob("bin/*"),
+    packages=find_packages(),
     zip_safe=True
 )
