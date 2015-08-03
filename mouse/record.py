@@ -2,11 +2,12 @@
 
 
 
-
+import argparse
 import io
+import picamera
 import time
-"""import picamera"""
 import datetime
+import os
 import RPi.GPIO as GPIO
 
 
@@ -20,18 +21,10 @@ def main(*argv):
        Defines arguments: time before and after, and mouse/trial to be tested
 
    """
-   
-   import argparse
-   import os
-   import time
-   import io
-   import picamera
-   import RPi.GPIO as GPIO
    parser = argparse.ArgumentParser(description='seconds before and after lever is pressed.')
    parser.add_argument('before', type=int, help='seconds to record before.')
    parser.add_argument('after', type=int, help='seconds to record after.')
    parser.add_argument('folder', type=str, default=".", help = 'mouse to be tested')
-   print(argv)
    args = parser.parse_args(argv[1:])
    folder = args.folder
    x = args.before
