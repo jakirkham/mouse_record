@@ -12,7 +12,7 @@ import shutil
 import sys
 
 from setuptools import setup, find_packages
-import versioneer
+
 setup(
     name="mouse_recorder",
     version="0.0.1",
