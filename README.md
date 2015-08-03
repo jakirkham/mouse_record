@@ -9,7 +9,9 @@ The program's is designed to record rodent behavior at specific intervals of tim
 # Building
 
 To install, use standard python installation procedure:
-    python setup.py install
+    `python setup.py install`
+Additionally, the program requires installation of `setuptools`; the link to the installation instructions is as follows: <https://pypi.python.org/pypi/setuptools>
+    
     
 
 
@@ -25,4 +27,4 @@ Once desired arguments are provided by the user -recording times-before and afte
 ##Sample Usage
 Execution of the program consists of the program name and respectve arguments: time to record before trigger event (in seconds), time to record after (in seconds), and directory of the file to be saved into. An example is shown below:
 
-`./mouse_recorder.py 2 2 /home/pi/Desktop/`
+`mouse-record 2 2 /home/pi/Desktop/`
