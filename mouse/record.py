@@ -8,11 +8,6 @@ import picamera
 import time
 import datetime
 import os
-import RPi.GPIO as GPIO
-
-
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(27, GPIO.IN, GPIO.PUD_UP)
 
 
 
@@ -30,7 +25,9 @@ def main(*argv):
    x = args.before
    y = args.after
    z = x + y 
-
+   import RPi.GPIO as GPIO
+   GPIO.setmode(GPIO.BCM)
+   GPIO.setup(27, GPIO.IN, GPIO.PUD_UP)
    with picamera.PiCamera(framerate=90) as camera:
       try:
          if not os.path.exists(folder):
