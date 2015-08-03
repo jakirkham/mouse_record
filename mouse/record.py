@@ -5,7 +5,7 @@
 
 import io
 import time
-import picamera
+"""import picamera"""
 import datetime
 import RPi.GPIO as GPIO
 
@@ -25,6 +25,7 @@ def main(*argv):
    import os
    import time
    import io
+   import picamera
    import RPi.GPIO as GPIO
    parser = argparse.ArgumentParser(description='seconds before and after lever is pressed.')
    parser.add_argument('before', type=int, help='seconds to record before.')
