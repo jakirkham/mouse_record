@@ -1,41 +1,51 @@
 # Mouse Recorder
+
 ###A cheap, modular, behavior recording program
+
 ![Mouserecord_logo.jpg](Mouserecord_logo.jpg)
-
-
 
 
 # Purpose
 
 The program's is designed to record rodent behavior at specific intervals of time, based on the initiation of a trigger event (e.g., the press of a lever.
 
+
 # Building
 
 To install, use standard python installation procedure:
 
     python setup.py install
-    
+
 Additionally, the program requires installation of [`setuptools`](https://pypi.python.org/pypi/setuptools)
 
 
 # Development
 
-###Installing
+### Installing
+
 Enter the following into the terminal to install the program:
 
     git clone https://github.com/bnhwa/mouse_record
-    git develop
-    
-###Updating    
+    python setup.py develop
+
+### Updating
+
 To update the program, first specify the directory to where the mouse_record file is saved to. Then, enter the `git pull` command. An example is provided as follows:
 
-    cd /Users/hwab/Dropbox (HHMI)/Code versions pi/mouse_record
     git pull
-    
-This will ensure that the software is up-to-date
+
+This will ensure that the software is up-to-date.
+
+### Uninstalling
+
+Enter the following into the terminal to install the program:
+
+    python setup.py develop --uninstall
+
 
 # Testing
-not implemented yet
+
+Not implemented yet.
 
 
 # Usage
@@ -49,5 +59,5 @@ Execution of the program consists of the program name and respectve arguments: t
 
     mouse-record 2 2 /home/pi/Desktop
     
-Also, as mentioned before, the program will end when a `KeyboardInterrupt`(Ctrl + c) is entered into the terminal
+Also, as mentioned before, the program will end when a `KeyboardInterrupt`(Ctrl + c) is entered into the terminal.
 
