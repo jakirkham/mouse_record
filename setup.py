@@ -7,10 +7,6 @@ __date__ = "$July 30, 2015 20:20:18 EDT$"
 
 
 from glob import glob
-import os
-import shutil
-import sys
-
 from setuptools import setup, find_packages
 
 setup(
