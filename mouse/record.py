@@ -16,31 +16,40 @@ def main(*argv):
         Defines arguments:
 
         Args:
-            folder = (strs):                   File directory
-            x = (int):                         Time to record before (in seconds)
-            y = (int):                         Time to record after (in seconds)
-            z = (str):                         Total buffer size (in seconds)
+            argv(str):                         Arguments are stored as a list
+            folder(str):                      File directory
+            x(int):                         Time to record before (in seconds)
+            y(int):                         Time to record after (in seconds)
 
 
     """
 
     # Time to record before and after as well as directory are stored here
     parser = argparse.ArgumentParser(
-        description="seconds before and after lever is pressed.")
-    parser.add_argument("before",
-                        type=int,
-                        help="seconds to record before.")
-    parser.add_argument("after",
-                        type=int,
-                        help="seconds to record after.")
-    parser.add_argument("folder",
-                        type=str, default='.',
-                        help="mouse to be tested")
+        description="seconds before and after lever is pressed."
+    )
+    parser.add_argument(
+        "before",
+        type=int,
+        help="seconds to record before."
+    )
+    parser.add_argument(
+        "after",
+        type=int,
+        help="seconds to record after."
+    )
+    parser.add_argument(
+        "folder",
+        type=str,
+        default='.',
+        help="mouse to be tested"
+    )
     args = parser.parse_args(argv[1:])
 
     folder = args.folder
     x = args.before
     y = args.after
+    # z is the total number of seconds to be stored in the buffer
     z = x + y
 
     # sets up trigger event for the recordings, i.e., GPIO 27
