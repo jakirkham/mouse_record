@@ -1,23 +1,38 @@
 # Mouse Recorder
 ###A cheap, modular, behavior recording program
-![](http://s16.postimg.org/yek83sdv9/Mouserecord_logo.jpg 2)
+![http://s16.postimg.org/yek83sdv9/Mouserecord_logo.jpg](http://s16.postimg.org/yek83sdv9/Mouserecord_logo.jpg)
+
+
+
 
 # Purpose
 
-The program's is designed to record rodent behavior at specific intervals of time, based on the initiation of a trigger event (e.g., the press of a lever.) Moreover, the program operates through Raspberry Pi-based system to significantly reduce cost as opposed to conventional recording apparatus.
+The program's is designed to record rodent behavior at specific intervals of time, based on the initiation of a trigger event (e.g., the press of a lever.
 
 # Building
 
 To install, use standard python installation procedure:
-    `python setup.py install`
-Additionally, the program requires installation of `setuptools`; the link to the installation instructions is as follows: <https://pypi.python.org/pypi/setuptools>
+
+    python setup.py install
+    
+Additionally, the program requires installation of [`setuptools`](https://pypi.python.org/pypi/setuptools)
 
 
 # Development
-`git clone https://github.com/bnhwa/mouse_record`
-`git develop`
 
+###Installing
+Enter the following into the terminal to install the program:
 
+    git clone https://github.com/bnhwa/mouse_record
+    git develop
+    
+###Updating    
+To update the program, first specify the directory to where the mouse_record file is saved to. Then, enter the `git pull` command. An example is provided as follows:
+
+    cd /Users/hwab/Dropbox (HHMI)/Code versions pi/mouse_record
+    git pull
+    
+This will ensure that the software is up-to-date
 
 # Testing
 not implemented yet
@@ -25,11 +40,14 @@ not implemented yet
 
 # Usage
 
-Once desired arguments are provided by the user -recording times-before and after in seconds- and directory, the program will initiate. Once the program is running, please run the program for at least 30 seconds (to allow the program to prevent extra seconds from entering the buffer).
+Once the desired arguments are provided by the user (e.g., seconds to record before and after a trigger event and directory) the program will initiate. For, each time a trigger event is initiated, the program will write the specified recording intervals into a h264 video file. The program will continue to run until a `KeyboardInterrupt` is entered into the terminal
 
 
 ##Sample Usage
 
 Execution of the program consists of the program name and respectve arguments: time to record before trigger event (in seconds), time to record after (in seconds), and directory of the file to be saved into. An example is shown below:
 
-`mouse-record 2 2 /home/pi/Desktop/`
+    mouse-record 2 2 /home/pi/Desktop
+    
+Also, as mentioned before, the program will end when a `KeyboardInterrupt`(Ctrl + c) is entered into the terminal
+
