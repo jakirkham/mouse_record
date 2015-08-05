@@ -5,7 +5,6 @@ __date__ = "$July 30, 2015 20:20:18 EDT$"
 
 import argparse
 import io
-import time
 import picamera
 import datetime
 import os
@@ -17,21 +16,26 @@ def main(*argv):
         Defines arguments:
 
         Args:
-            args = parser.parse_args(argv[1:]):     All arguments stored as list
-
-            folder = args.folder:                   File directory
-            x = args.before:                        Time to record before (in seconds)
-            y = args.after:                         Time to record after (in seconds)
-            z = x + y                               Total buffer size (in seconds)
+            folder = (strs):                   File directory
+            x = (int):                         Time to record before (in seconds)
+            y = (int):                         Time to record after (in seconds)
+            z = (str):                         Total buffer size (in seconds)
 
 
     """
 
     # Time to record before and after as well as directory are stored here
-    parser = argparse.ArgumentParser(description="seconds before and after lever is pressed.")
-    parser.add_argument("before", type=int, help="seconds to record before.")
-    parser.add_argument("after", type=int, help="seconds to record after.")
-    parser.add_argument("folder", type=str, default='.', help="mouse to be tested")
+    parser = argparse.ArgumentParser(
+        description="seconds before and after lever is pressed.")
+    parser.add_argument("before",
+                        type=int,
+                        help="seconds to record before.")
+    parser.add_argument("after",
+                        type=int,
+                        help="seconds to record after.")
+    parser.add_argument("folder",
+                        type=str, default='.',
+                        help="mouse to be tested")
     args = parser.parse_args(argv[1:])
 
     folder = args.folder
@@ -53,8 +57,8 @@ def main(*argv):
             while True:
                 # Up until now, the program defines the arguments and settings
                 # for the Raspberry Pi camera and trigger event(GPIO 27)
-                # The code below provides the recording protocol for the stream,
-                # based on the initiation of the trigger event
+                # The code below provides the recording protocol for the
+                # stream, based on the initiation of the trigger event
                 stream.seek(0)
                 camera.start_recording(stream, format="h264", splitter_port=1)
                 GPIO.wait_for_edge(27, GPIO.FALLING)
@@ -68,7 +72,8 @@ def main(*argv):
                 # Gives the time specifications that you want, in
                 # year-month-day_hour:minute:second:microsecond
                 j = datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S.%f")
-                # Responsible for saving and writing the stream to a h264 video file
+                # Responsible for saving and writing the stream
+                # to a h264 video file
                 with io.open(os.path.join(folder, "mouse_press" + str(j).replace(
                         ' ', '_') + ".h264"), "wb") as output:
                     data = stream.read()
