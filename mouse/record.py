@@ -13,8 +13,8 @@ import os
 
 def main(*argv):
     """
-        Simple main function. Defines arguments: time before and after the initiation of a trigger event,
-        and directory of the file to be saved into.
+        Simple main function that performs event center recording.
+        Defines arguments:
 
         Args:
             args = parser.parse_args(argv[1:]):     All arguments stored as list
@@ -51,8 +51,10 @@ def main(*argv):
                 os.makedirs(folder)
             stream = picamera.PiCameraCircularIO(camera, seconds=z)
             while True:
-                # Up until now, the program defines the arguments and settings for the Raspberry Pi camera and trigger event(GPIO 27)
-                # The code below provides the recording protocol for the stream, based on the initiation of the trigger event
+                # Up until now, the program defines the arguments and settings
+                # for the Raspberry Pi camera and trigger event(GPIO 27)
+                # The code below provides the recording protocol for the stream,
+                # based on the initiation of the trigger event
                 stream.seek(0)
                 camera.start_recording(stream, format="h264", splitter_port=1)
                 GPIO.wait_for_edge(27, GPIO.FALLING)
