@@ -17,6 +17,10 @@ def main(*argv):
 
         Args:
             argv(str):                      Arguments are stored as a list
+
+        Notes:
+            these are the parameters of the arguments.
+
             folder(str):                    File directory
             x(int):                         Time to record before (in seconds)
             y(int):                         Time to record after (in seconds)
