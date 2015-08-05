@@ -1,6 +1,6 @@
 # Mouse Recorder
 ###A cheap, modular, behavior recording program
-![http://s16.postimg.org/yek83sdv9/Mouserecord_logo.jpg](http://s16.postimg.org/yek83sdv9/Mouserecord_logo.jpg)
+![Mouserecord_logo.jpg](Mouserecord_logo.jpg)
 
 
 
