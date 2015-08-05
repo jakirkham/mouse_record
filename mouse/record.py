@@ -54,6 +54,7 @@ def main(*argv):
 
     # sets up trigger event for the recordings, i.e., GPIO 27
     import RPi.GPIO as GPIO
+
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(27, GPIO.IN, GPIO.PUD_UP)
 
