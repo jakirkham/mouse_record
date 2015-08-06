@@ -12,7 +12,7 @@ import os
 
 def main(*argv):
     """
-        Simple main function that takes a photo of the background when run.
+       The program takes a photo of the background when run and saves it into a user-specified directory.
 
         Args:
             argv(str):                      Arguments are stored as a list
@@ -27,12 +27,12 @@ def main(*argv):
 
     # Directory is stored here
     parser = argparse.ArgumentParser(
-        description="Directory to save the picture into"
+        description=" Takes photo of background saves to a directory."
     )
     parser.add_argument(
         "folder",
         type=str,
-        help="Directory"
+        help="Directory to picture to"
     )
     args = parser.parse_args(argv[1:])
     folder = args.folder
