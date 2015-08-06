@@ -91,7 +91,7 @@ def main(*argv):
                 with io.open(
                         os.path.join(
                             folder,
-                            "mouse_press" + str(j).replace(' ', '_') + ".h264"
+                            "mouse_press-" + str(j).replace(' ', '_') + ".h264"
                         ),
                         "wb"
                 ) as output:
