@@ -54,7 +54,7 @@ Once the desired arguments are provided by the user (e.g., seconds to record bef
 
 ##Picture Usage
 
-Execution of the program consists of the program name and a single argument, the directory in which a picture is to be saved into.
+Execution of the program consists of the program name and a single argument, the directory in which the picture is to be saved into.
 
     mouse-picture ~/Destkop
 
