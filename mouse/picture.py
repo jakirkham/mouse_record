@@ -26,6 +26,9 @@ def main(*argv):
     """
 
     # Directory is stored here
+    parser = argparse.ArgumentParser(
+        description="seconds before and after lever is pressed."
+    )
     parser.add_argument(
         "folder",
         type=str,
