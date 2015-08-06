@@ -88,8 +88,13 @@ def main(*argv):
                 j = datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S.%f")
                 # Responsible for saving and writing the stream
                 # to a h264 video file
-                with io.open(os.path.join(folder, "mouse_press" + str(j).replace(
-                        ' ', '_') + ".h264"), "wb") as output:
+                with io.open(
+                        os.path.join(
+                            folder,
+                            "mouse_press" + str(j).replace(' ', '_') + ".h264"
+                        ),
+                        "wb"
+                ) as output:
                     data = stream.read()
                     if not data:
                         break
