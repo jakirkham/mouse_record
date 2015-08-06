@@ -27,7 +27,7 @@ def main(*argv):
 
     # Directory is stored here
     parser = argparse.ArgumentParser(
-        description="seconds before and after lever is pressed."
+        description="Directory to save the picture into"
     )
     parser.add_argument(
         "folder",
@@ -42,7 +42,7 @@ def main(*argv):
     with picamera.PiCamera(framerate=90) as camera:
         j = datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S.%f")
         camera.capture(os.path.join(
-            folder, "background" + str(j) + os.extsep + "jpg"
+            folder, "background-" + str(j) + os.extsep + "jpg"
         ))
 
     return 0
