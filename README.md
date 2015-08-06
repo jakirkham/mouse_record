@@ -52,8 +52,13 @@ Not implemented yet.
 
 Once the desired arguments are provided by the user (e.g., seconds to record before and after a trigger event and directory) the program will initiate. For, each time a trigger event is initiated, the program will write the specified recording intervals into a h264 video file. The program will continue to run until a `KeyboardInterrupt` is entered into the terminal
 
+##Picture Usage
 
-##Sample Usage
+Execution of the program consists of the program name and a single argument, the directory in which the picture is to be saved into.
+
+    mouse-picture ~/Destkop
+
+##Recorder Usage
 
 Execution of the program consists of the program name and respectve arguments: time to record before trigger event (in seconds), time to record after (in seconds), and directory of the file to be saved into. An example is shown below:
 
