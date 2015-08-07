@@ -4,7 +4,7 @@
 import time
 import sys
 import picamera
-def main():
+def main(*argv):
     with picamera.PiCamera(framerate=90) as camera:
         try:
             camera.preview_fullscreen=False
@@ -18,8 +18,5 @@ def main():
     return 0
                 
     
-if __name__ == "__main__":
-   import sys
-   
-   sys.exit(main())
+
 
