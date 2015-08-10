@@ -4,7 +4,7 @@ __date__ = "$Aug 10, 2015, 3:47 PM$"
 import os
 import shutil
 import tempfile
-import Rpi.GPIO as GPIO
+import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(27, GPIO.OUT)
 import threading
