@@ -16,7 +16,7 @@ def main(*argv):
     parser.add_argument(
         "time",
         type = int,
-        default = "60",
+        default = 60,
         help = "Preview length (Defaults to 60 seconds)"
     )    
     args = parser.parse_args()
