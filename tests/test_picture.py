@@ -29,24 +29,9 @@ class TestPicture(object):
              "."
         )
 
-        while len(os.listdir(self.tempdir)) < 2:
-           time.sleep(1)
-        time.sleep(1)
-
         filenames = []
         for each_filename in os.listdir(self.tempdir):
             filenames.append(os.path.join(self.tempdir, each_filename))
         filenames.sort()
-
-        assert ".err" in filenames[0]
-        assert ".out" in filenames[1]
-
-        with open(filenames[0], "r") as f:
-            s = f.read().strip()
-            print("File \"%s\" contains \"%s\"." % (f.name, s))
-            assert s == ""
-
-        with open(filenames[1], "r") as f:
-            s = f.read().strip()
-            print("File \"%s\" contains \"%s\"." % (f.name, s))
-            assert s == "output"
+        assert len(filenames)==1
+        assert ".jpg" in filenames[0]
