@@ -57,6 +57,13 @@ Once the desired arguments are provided by the user (e.g., seconds to record bef
 Execution of the program consists of the program name and a single argument, the directory in which the picture is to be saved into.
 
     mouse-picture ~/Destkop
+    
+    
+##Preview Usage
+
+Execution of the program consists of the program name and a single argument: the time desired length of the camera preview (in seconds). Additionally, the user can exit at any time by entering `Ctrl + c` 
+
+    mouse-preview 60 
 
 ##Recorder Usage
 
