@@ -11,21 +11,20 @@ import picamera
 
 def main(*argv):
     parser = argparse.ArgumentParser(
-        description = "Takes camera preview. Exit using KeyboardInterrupt."
+        description="Takes camera preview. Exit using `Ctrl + c`."
     )
     parser.add_argument(
         "time",
-        type = int,
-        default = 60,
-        help = "Preview length (Defaults to 60 seconds)"
+        type=int,
+        help="Preview length"
     )    
     args = parser.parse_args()
     t = args.time
 
-    with picamera.PiCamera(framerate = 90) as camera:
+    with picamera.PiCamera(framerate=90) as camera:
         try:
             camera.preview_fullscreen = False
-            camera.preview_window = (100,20,640,480)
+            camera.preview_window = (100, 20, 640, 480)
             camera.start_preview()
             time.sleep(t)
         finally:
