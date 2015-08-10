@@ -5,7 +5,6 @@ __date__ = "$July 30, 2015 20:20:18 EDT$"
 
 import argparse
 import time
-import sys
 import picamera
 
 
