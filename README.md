@@ -57,19 +57,18 @@ Once the desired arguments are provided by the user (e.g., seconds to record bef
 Execution of the program consists of the program name and a single argument, the directory in which the picture is to be saved into.
 
     mouse-picture ~/Destkop
-    
-    
+
 ##Preview Usage
 
-Execution of the program consists of the program name and a single argument: the time desired length of the camera preview (in seconds). Additionally, the user can exit at any time by entering `Ctrl + c` 
+Execution of the program consists of the program name and a single argument: the time desired length of the camera preview (in seconds). Additionally, the user can exit at any time by entering `Ctrl + c`
 
-    mouse-preview 60 
+    mouse-preview 60
 
 ##Recorder Usage
 
 Execution of the program consists of the program name and respectve arguments: time to record before trigger event (in seconds), time to record after (in seconds), and directory of the file to be saved into. An example is shown below:
 
     mouse-record 2 2 /home/pi/Desktop
-    
+
 Also, as mentioned before, the program will end when a `KeyboardInterrupt`(Ctrl + c) is entered into the terminal.
 

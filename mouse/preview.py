@@ -5,7 +5,6 @@ __date__ = "$July 30, 2015 20:20:18 EDT$"
 
 import argparse
 import time
-import sys
 import picamera
 
 
@@ -17,7 +16,7 @@ def main(*argv):
         "time",
         type=int,
         help="Preview length"
-    )    
+    )
     args = parser.parse_args()
     t = args.time
 
