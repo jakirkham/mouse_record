@@ -5,8 +5,6 @@ import os
 import shutil
 import tempfile
 import RPi.GPIO as GPIO
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(27, GPIO.OUT)
 import threading
 
 from mouse.record import main
