@@ -7,6 +7,7 @@ import tempfile
 import Rpi.GPIO as GPIO
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(27, GPIO.OUT)
+import threading
 
 from mouse.record import main
 
@@ -27,15 +28,17 @@ class TestPicture(object):
         self.cwd = ""
 
     def test_main_0(self):
-        main("",
-             "1",
-             "1",
-             "."
-        )
-        time.sleep(4)
-        GPIO.output(12, GPIO.LOW)
-
-
+        t = threading.Thread(target=main, args=(
+            "",
+            "1",
+            "1",
+            "."
+        ))
+        t.daemon = True
+        t.start()
+        t.join(2)
+        GPIO.output(27, (GPIO.LOW, GPIO.HIGH, GPIO.LOW))
+        t.join(2)
         filenames = []
         for each_filename in os.listdir(self.tempdir):
             filenames.append(os.path.join(self.tempdir, each_filename))
