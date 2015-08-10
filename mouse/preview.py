@@ -16,7 +16,7 @@ def main(*argv):
         "time",
         type=int,
         help="Preview length"
-    )    
+    )
     args = parser.parse_args()
     t = args.time
 
