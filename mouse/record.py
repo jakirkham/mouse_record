@@ -56,7 +56,6 @@ def main(*argv):
     parser.add_argument(
         "folder",
         type=str,
-        default='.',
         help="mouse to be tested"
     )
     args = parser.parse_args(argv[1:])
