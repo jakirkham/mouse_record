@@ -8,7 +8,9 @@ import tempfile
 import RPi.GPIO as GPIO
 import threading
 
-from mouse.record import main
+import mock
+ 
+from mouse.record import main, Trigger
 
 
 class TestPicture(object):
@@ -26,7 +28,10 @@ class TestPicture(object):
         self.tempdir = ""
         self.cwd = ""
 
-    def test_main_0(self):
+    @mock.patch(__name__ + '.' +"Trigger")
+    def test_main_0(self, mock_class):
+        Trigger.wait = lambda : time.sleep(1)
+
         t = threading.Thread(target=main, args=(
             "",
             "1",
@@ -36,9 +41,6 @@ class TestPicture(object):
         t.daemon = True
         t.start()
         t.join(2)
-        GPIO.output(27, GPIO.LOW)
-        GPIO.output(27, GPIO.HIGH)
-        GPIO.output(27, GPIO.LOW)
         t.join(2)
         ctypes.pythonapi.PyThreadState_SetAsyncExc(ctypes.c_long(t.ident), ctypes.py_object(KeyboardInterrupt))
         
