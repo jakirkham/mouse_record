@@ -2,6 +2,7 @@ __author__ = "Bailey Nozomu Hwa <hwab@janelia.hhmi.org>"
 __date__ = "$Aug 10, 2015, 3:47 PM$"
 
 import os
+import ctypes
 import shutil
 import tempfile
 import RPi.GPIO as GPIO
@@ -37,9 +38,12 @@ class TestPicture(object):
         t.join(2)
         GPIO.output(27, (GPIO.LOW, GPIO.HIGH, GPIO.LOW))
         t.join(2)
+        ctypes.pythonapi.PyThreadState_SetAsyncExc(ctypes.c_long(t.ident), ctypes.py_object(KeyboardInterrupt))
+        
         filenames = []
         for each_filename in os.listdir(self.tempdir):
             filenames.append(os.path.join(self.tempdir, each_filename))
         filenames.sort()
+        
         assert len(filenames)==1
         assert ".h264" in filenames[0]
