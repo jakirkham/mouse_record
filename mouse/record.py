@@ -10,6 +10,17 @@ import datetime
 import os
 
 
+class Trigger(object):
+    def __init__(self):
+        import RPi.GPIO as GPIO
+        GPIO.setmode(GPIO.BCM)
+        GPIO.setup(27, GPIO.IN, GPIO.PUD_UP)
+
+    def wait(self):
+        import RPi.GPIO as GPIO
+        GPIO.wait_for_edge(27, GPIO.FALLING)
+
+
 def main(*argv):
     """
         Simple main function that performs event center recording.
@@ -57,10 +68,7 @@ def main(*argv):
     z = x + y
 
     # sets up trigger event for the recordings, i.e., GPIO 27
-    import RPi.GPIO as GPIO
-
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setup(27, GPIO.IN, GPIO.PUD_UP)
+    trigger = Trigger()
 
     with picamera.PiCamera(framerate=90) as camera:
         try:
@@ -75,7 +83,7 @@ def main(*argv):
                 # stream, based on the initiation of the trigger event
                 stream.seek(0)
                 camera.start_recording(stream, format="h264", splitter_port=1)
-                GPIO.wait_for_edge(27, GPIO.FALLING)
+                trigger.wait()
                 camera.wait_recording(y, splitter_port=1)
                 camera.stop_recording()
 
