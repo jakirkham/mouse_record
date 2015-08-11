@@ -8,7 +8,8 @@ import tempfile
 import threading
 import mock
 
-from mouse.record import main, Trigger
+import mouse
+from mouse.record import main
 
 
 class TestPicture(object):
@@ -26,9 +27,9 @@ class TestPicture(object):
         self.tempdir = ""
         self.cwd = ""
 
-    @mock.patch(__name__ + '.' +"Trigger")
+    @mock.patch("mouse.record.Trigger")
     def test_main_0(self, mock_class):
-        Trigger.wait = lambda : time.sleep(1)
+        mock_class.wait = lambda _: time.sleep(1)
 
         t = threading.Thread(target=main, args=(
             "",
