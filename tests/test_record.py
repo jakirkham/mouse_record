@@ -5,11 +5,9 @@ import os
 import ctypes
 import shutil
 import tempfile
-import RPi.GPIO as GPIO
 import threading
-
 import mock
- 
+
 from mouse.record import main, Trigger
 
 
@@ -43,11 +41,11 @@ class TestPicture(object):
         t.join(2)
         t.join(2)
         ctypes.pythonapi.PyThreadState_SetAsyncExc(ctypes.c_long(t.ident), ctypes.py_object(KeyboardInterrupt))
-        
+
         filenames = []
         for each_filename in os.listdir(self.tempdir):
             filenames.append(os.path.join(self.tempdir, each_filename))
         filenames.sort()
-        
+
         assert len(filenames)==1
         assert ".h264" in filenames[0]
