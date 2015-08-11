@@ -36,7 +36,9 @@ class TestPicture(object):
         t.daemon = True
         t.start()
         t.join(2)
-        GPIO.output(27, (GPIO.LOW, GPIO.HIGH, GPIO.LOW))
+        GPIO.output(27, GPIO.LOW)
+        GPIO.output(27, GPIO.HIGH)
+        GPIO.output(27, GPIO.LOW)
         t.join(2)
         ctypes.pythonapi.PyThreadState_SetAsyncExc(ctypes.c_long(t.ident), ctypes.py_object(KeyboardInterrupt))
         
