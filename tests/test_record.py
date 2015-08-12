@@ -12,7 +12,7 @@ import mouse
 from mouse.record import main
 
 
-class TestPicture(object):
+class TestRecord(object):
     def setup(self):
         self.cwd = os.getcwd()
         self.tempdir = ""
@@ -48,5 +48,5 @@ class TestPicture(object):
         filenames.sort()
         print(filenames)
 
-        assert len(filenames)==1
+        assert len(filenames) == 1
         assert ".h264" in filenames[0]

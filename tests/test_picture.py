@@ -24,8 +24,9 @@ class TestPicture(object):
         self.cwd = ""
 
     def test_main_0(self):
-        main("",
-             "."
+        main(
+            "",
+            "."
         )
 
         filenames = []
