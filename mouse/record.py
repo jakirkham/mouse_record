@@ -60,6 +60,12 @@ def main(*argv):
         description="seconds before and after lever is pressed."
     )
     parser.add_argument(
+        "-p",
+        "--port",
+        nargs='?',
+        default=27
+    )
+    parser.add_argument(
         "before",
         type=int,
         help="seconds to record before."
@@ -79,6 +85,7 @@ def main(*argv):
     folder = args.folder
     x = args.before
     y = args.after
+    Trigger.port = args.port
     # z is the total number of seconds to be stored in the buffer
     z = x + y
 
