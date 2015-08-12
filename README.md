@@ -43,32 +43,34 @@ Enter the following into the terminal to install the program:
     python setup.py develop --uninstall
 
 
-# Testing
+#Testing
 
-Not implemented yet.
+Testing of the program requires the installation of [`mock`](https://pypi.python.org/pypi/mock) and [`nose`](http://nose.readthedocs.org/en/latest/). When testing the program, the user should move to the directory to where the mouse_record file is located. Then enter the `nosetests` command. An example is provided as follows:
+
+    nosetests
 
 
 # Usage
 
 Once the desired arguments are provided by the user (e.g., seconds to record before and after a trigger event and directory) the program will initiate. For, each time a trigger event is initiated, the program will write the specified recording intervals into a h264 video file. The program will continue to run until a `KeyboardInterrupt` is entered into the terminal
 
-##Picture Usage
+###Picture Usage
 
 Execution of the program consists of the program name and a single argument, the directory in which the picture is to be saved into.
 
     mouse-picture ~/Destkop
 
-##Preview Usage
+###Preview Usage
 
 Execution of the program consists of the program name and a single argument: the time desired length of the camera preview (in seconds). Additionally, the user can exit at any time by entering `Ctrl + c`
 
     mouse-preview 60
 
-##Recorder Usage
+###Recorder Usage
 
 Execution of the program consists of the program name and respectve arguments: time to record before trigger event (in seconds), time to record after (in seconds), and directory of the file to be saved into. An example is shown below:
 
-    mouse-record 2 2 /home/pi/Desktop
+    sudo mouse-record 2 2 /home/pi/Desktop
 
 Also, as mentioned before, the program will end when a `KeyboardInterrupt`(Ctrl + c) is entered into the terminal.
 
