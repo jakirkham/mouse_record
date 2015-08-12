@@ -11,7 +11,17 @@ import os
 
 
 class Trigger(object):
+    """
+    Class responsible for setting event trigger and its respective GPIO port
+    as an argument and waiting for updates.
+    """
     def __init__(self, port=27):
+        """
+        Function sets up GPIO port as argument.
+
+        Args:
+            port(int):                  GPIO port of trigger
+        """
         self.port = port
 
         import RPi.GPIO as GPIO
@@ -19,6 +29,10 @@ class Trigger(object):
         GPIO.setup(self.port, GPIO.IN, GPIO.PUD_UP)
 
     def wait(self):
+        """
+        Function sets initiation of trigger event.
+        """
+
         import RPi.GPIO as GPIO
         GPIO.wait_for_edge(self.port, GPIO.FALLING)
 
