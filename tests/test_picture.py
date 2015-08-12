@@ -33,5 +33,5 @@ class TestPicture(object):
         for each_filename in os.listdir(self.tempdir):
             filenames.append(os.path.join(self.tempdir, each_filename))
         filenames.sort()
-        assert len(filenames)==1
+        assert len(filenames) == 1
         assert ".jpg" in filenames[0]
