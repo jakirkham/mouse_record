@@ -11,14 +11,16 @@ import os
 
 
 class Trigger(object):
-    def __init__(self):
+    def __init__(self, port=27):
+        self.port = port
+
         import RPi.GPIO as GPIO
         GPIO.setmode(GPIO.BCM)
-        GPIO.setup(27, GPIO.IN, GPIO.PUD_UP)
+        GPIO.setup(self.port, GPIO.IN, GPIO.PUD_UP)
 
     def wait(self):
         import RPi.GPIO as GPIO
-        GPIO.wait_for_edge(27, GPIO.FALLING)
+        GPIO.wait_for_edge(self.port, GPIO.FALLING)
 
 
 def main(*argv):
