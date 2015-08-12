@@ -85,12 +85,11 @@ def main(*argv):
     folder = args.folder
     x = args.before
     y = args.after
-    Trigger.port = args.port
     # z is the total number of seconds to be stored in the buffer
     z = x + y
 
     # sets up trigger event for the recordings, i.e., GPIO 27
-    trigger = Trigger()
+    trigger = Trigger(args.port)
 
     with picamera.PiCamera(framerate=90) as camera:
         try:
