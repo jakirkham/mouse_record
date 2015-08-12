@@ -40,13 +40,13 @@ class TestPicture(object):
         t.daemon = True
         t.start()
         t.join(2)
-        t.join(2)
         ctypes.pythonapi.PyThreadState_SetAsyncExc(ctypes.c_long(t.ident), ctypes.py_object(KeyboardInterrupt))
 
         filenames = []
         for each_filename in os.listdir(self.tempdir):
             filenames.append(os.path.join(self.tempdir, each_filename))
         filenames.sort()
+        print(filenames)
 
         assert len(filenames)==1
         assert ".h264" in filenames[0]
