@@ -63,7 +63,6 @@ def main(*argv):
         "-p",
         "--port",
         type=int,
-        nargs='?',
         default=27
     )
     parser.add_argument(
