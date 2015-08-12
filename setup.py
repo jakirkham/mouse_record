@@ -16,7 +16,7 @@ setup(
     author_email="hwab@janelia.hhmi.org",
     scripts=glob("bin/*"),
     packages=find_packages(exclude=["tests*"]),
-    install_requires=["picamera >=1.0"],
+    install_requires=["picamera >=1.0", "RPi.GPIO >=0.5.11"],
     tests_require=["nose", "mock"],
     test_suite="nose.collector",
     zip_safe=True
