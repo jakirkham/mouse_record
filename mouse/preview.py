@@ -17,7 +17,7 @@ def main(*argv):
         type=int,
         help="Preview length"
     )
-    args = parser.parse_args()
+    args = parser.parse_args(argv[1:])
     t = args.time
 
     with picamera.PiCamera(framerate=90) as camera:

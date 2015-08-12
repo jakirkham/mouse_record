@@ -15,7 +15,9 @@ setup(
     author="Bailey Hwa",
     author_email="hwab@janelia.hhmi.org",
     scripts=glob("bin/*"),
-    packages=find_packages(),
+    packages=find_packages(exclude=["tests*"]),
     install_requires=["picamera >=1.0"],
+    tests_require=["nose", "mock"],
+    test_suite="nose.collector",
     zip_safe=True
 )

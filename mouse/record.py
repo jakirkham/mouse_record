@@ -10,6 +10,33 @@ import datetime
 import os
 
 
+class Trigger(object):
+    """
+    Class responsible for setting event trigger and its respective GPIO port
+    as an argument and waiting for updates.
+    """
+    def __init__(self, port=27):
+        """
+        Function sets up GPIO port as argument.
+
+        Args:
+            port(int):                  GPIO port of trigger
+        """
+        self.port = port
+
+        import RPi.GPIO as GPIO
+        GPIO.setmode(GPIO.BCM)
+        GPIO.setup(self.port, GPIO.IN, GPIO.PUD_UP)
+
+    def wait(self):
+        """
+        Function sets initiation of trigger event.
+        """
+
+        import RPi.GPIO as GPIO
+        GPIO.wait_for_edge(self.port, GPIO.FALLING)
+
+
 def main(*argv):
     """
         Simple main function that performs event center recording.
@@ -45,7 +72,6 @@ def main(*argv):
     parser.add_argument(
         "folder",
         type=str,
-        default='.',
         help="mouse to be tested"
     )
     args = parser.parse_args(argv[1:])
@@ -57,10 +83,7 @@ def main(*argv):
     z = x + y
 
     # sets up trigger event for the recordings, i.e., GPIO 27
-    import RPi.GPIO as GPIO
-
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setup(27, GPIO.IN, GPIO.PUD_UP)
+    trigger = Trigger()
 
     with picamera.PiCamera(framerate=90) as camera:
         try:
@@ -75,7 +98,7 @@ def main(*argv):
                 # stream, based on the initiation of the trigger event
                 stream.seek(0)
                 camera.start_recording(stream, format="h264", splitter_port=1)
-                GPIO.wait_for_edge(27, GPIO.FALLING)
+                trigger.wait()
                 camera.wait_recording(y, splitter_port=1)
                 camera.stop_recording()
 

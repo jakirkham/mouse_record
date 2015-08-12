@@ -30,7 +30,7 @@ Enter the following into the terminal to install the program:
 
 ### Updating
 
-To update the program, first specify the directory to where the mouse_record file is saved to. Then, enter the `git pull` command. An example is provided as follows:
+To update the program, first specify the directory to where the `mouse_record` file is saved to. Then, enter the `git pull` command. An example is provided as follows:
 
     git pull
 
@@ -43,9 +43,11 @@ Enter the following into the terminal to install the program:
     python setup.py develop --uninstall
 
 
-# Testing
+#Testing
 
-Not implemented yet.
+Testing of the program requires the installation of [`mock`](https://pypi.python.org/pypi/mock) and [`nose`](http://nose.readthedocs.org/en/latest/). When testing the program, the user should move to the directory to where the `mouse_record` file is located. Then enter the `nosetests` command. An example is provided as follows:
+
+    nosetests
 
 
 # Usage
@@ -68,7 +70,7 @@ Execution of the program consists of the program name and a single argument: the
 
 Execution of the program consists of the program name and respectve arguments: time to record before trigger event (in seconds), time to record after (in seconds), and directory of the file to be saved into. An example is shown below:
 
-    mouse-record 2 2 /home/pi/Desktop
+    sudo mouse-record 2 2 /home/pi/Desktop
 
 Also, as mentioned before, the program will end when a `KeyboardInterrupt`(Ctrl + c) is entered into the terminal.
 
