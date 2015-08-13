@@ -60,6 +60,13 @@ def main(*argv):
         description="seconds before and after lever is pressed."
     )
     parser.add_argument(
+        "-p",
+        "--port",
+        type=int,
+        default=27,
+        help="GPIO port of trigger"
+    )
+    parser.add_argument(
         "before",
         type=int,
         help="seconds to record before."
@@ -83,7 +90,7 @@ def main(*argv):
     z = x + y
 
     # sets up trigger event for the recordings, i.e., GPIO 27
-    trigger = Trigger()
+    trigger = Trigger(args.port)
 
     with picamera.PiCamera(framerate=90) as camera:
         try:
