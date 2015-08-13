@@ -45,7 +45,7 @@ Enter the following into the terminal to install the program:
 
 #Testing
 
-Testing of the program requires the installation of [`mock`](https://pypi.python.org/pypi/mock) and [`nose`](http://nose.readthedocs.org/en/latest/). When testing the program, the user should move to the directory to where the `mouse_record` file is located. Then enter the `nosetests` command. An example is provided as follows:
+When testing the program, the user should move to the directory to where the `mouse_record` file is located. Then enter the `nosetests` command. An example is provided as follows:
 
     nosetests
 
