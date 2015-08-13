@@ -31,8 +31,10 @@ def main(*argv):
     )
     parser.add_argument(
         "folder",
+        nargs='?',
         type=str,
-        help="Directory to picture to"
+        default=os.getcwd(),
+        help="Directory to picture to (default is current working directory)."
     )
     args = parser.parse_args(argv[1:])
     folder = args.folder
