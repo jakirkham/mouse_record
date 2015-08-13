@@ -1,15 +1,12 @@
 from __future__ import print_function
 """
 ===============================================================================
-mouse-picture
+Overview
 ===============================================================================
 
--------------------------------------------------------------------------------
-Overview
--------------------------------------------------------------------------------
-
-Program takes a photo of the background, and saves it into the user-specified
-directory. The photos are time-stamped and in .jpg format.
+The mouse-picture program takes a photo of the background, and saves it into
+the user-specified directory. The generated photos are time-stamped and in
+.jpg format.
 """
 
 
