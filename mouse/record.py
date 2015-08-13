@@ -63,7 +63,8 @@ def main(*argv):
         "-p",
         "--port",
         type=int,
-        default=27
+        default=27,
+        help="GPIO port of trigger"
     )
     parser.add_argument(
         "before",
