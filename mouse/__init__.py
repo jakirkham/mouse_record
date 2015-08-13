@@ -12,7 +12,7 @@ of a lever), the program records the user-specified time before and after
 a desired event. In addition to its primary recording feature, the package
 contains two auxiliary programs that provide a preview of the camera and take a
 photo of the background for ease of setup purposes. Additionally, the package
-operates on a Raspberry Pi-based system, providing a cheaper alternative for
+operates on a Raspberry Pi-based system, providing a cheaper alternative than
 conventional recording apparatus used in behavioral studies.
 
 
