@@ -5,12 +5,15 @@
 Overview
 ===============================================================================
 
-The ``Mouse Recorder`` package is designed to record rodent behavior at specific
-intervals of time, based on the initiation of a trigger event
-(e.g., the press of a lever. In addition to its primary recording feature,
+The ``Mouse Recorder`` package is designed for the ease of recording and
+singling out desired behavior of rodents, namely the events of interest in
+reward-stimulus studies. Using these events as triggers (e.g., the press
+of a lever), the program records the user-specified time before and after
+a desired event. In addition to its primary recording feature,
 the package contains two auxiliary programs that provide a preview
 of the camera and take a photo of the background. Additionally, the package
-operates on a Raspberry Pi-based system.
+operates on a Raspberry Pi-based system, providing a cheaper alternative for
+conventional recording apparatus used in behavioral studies.
 
 
 ===============================================================================
@@ -48,7 +51,9 @@ Enter the following into the terminal to install the program:
 Updating
 -------------------------------------------------------------------------------
 
-To update the program, first specify the directory to where the `mouse_record` file is saved to. Then, enter the `git pull` command. An example is provided as follows:
+To update the program, first specify the directory to where the `mouse_record`
+file is saved to. Then, enter the `git pull` command.
+An example is provided as follows:
 
 
 .. code-block:: sh
@@ -93,17 +98,11 @@ An example is provided as follows:
 Usage
 ===============================================================================
 
-For the ``mouse-record program`` Once the desired arguments are provided by the
-user (e.g., seconds to record before and after a trigger event and directory)
-the program will initiate. For, each time a trigger event is initiated,
-the program will write the specified recording intervals into a h264 video file.
-The program will continue to run until a `KeyboardInterrupt`is entered into
-the terminal
-
 -------------------------------------------------------------------------------
 Picture Usage
 -------------------------------------------------------------------------------
-Execution of the program consists of the program name and a single argument, the directory in which the picture is to be saved into.
+Execution of the program consists of the program name and a single argument,
+the directory in which the picture is to be saved into.
 
 
 .. code-block:: sh
@@ -112,7 +111,9 @@ Execution of the program consists of the program name and a single argument, the
 
 ##Preview Usage
 
-Execution of the program consists of the program name and a single argument: the time desired length of the camera preview (in seconds). Additionally, the user can exit at any time by entering `Ctrl + c`
+Execution of the program consists of the program name and a single argument:
+the time desired length of the camera preview (in seconds).
+Additionally, the user can exit at any time by entering `Ctrl + c`
 
 
 .. code-block:: sh
@@ -121,7 +122,10 @@ Execution of the program consists of the program name and a single argument: the
 
 ##Recorder Usage
 
-Execution of the program consists of the program name and respectve arguments: time to record before trigger event (in seconds), time to record after (in seconds), and directory of the file to be saved into. An example is shown below:
+Execution of the program consists of the program name and respectve arguments:
+time to record before trigger event (in seconds), time to record after
+(in seconds), and directory of the file to be saved into.
+An example is shown below:
 
 
 .. code-block:: sh

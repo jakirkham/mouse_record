@@ -1,4 +1,20 @@
 from __future__ import print_function
+"""
+===============================================================================
+mouse-record
+===============================================================================
+
+-------------------------------------------------------------------------------
+Overview
+-------------------------------------------------------------------------------
+
+The mouse-record program is designed for the ease of recording and
+singling out desired behavior of rodents, namely the events of interest in
+reward-stimulus studies. Using these events as triggers (e.g., the press
+of a lever), the program records the user-specified time before and after
+a desired event. The generated h264 video files are saved into the desired
+directory.
+"""
 
 __author__ = "Bailey Nozomu Hwa <hwab@janelia.hhmi.org"
 __date__ = "$July 30, 2015 20:20:18 EDT$"

@@ -1,4 +1,17 @@
 from __future__ import print_function
+"""
+===============================================================================
+mouse-picture
+===============================================================================
+
+-------------------------------------------------------------------------------
+Overview
+-------------------------------------------------------------------------------
+
+Program takes a photo of the background, and saves it into the user-specified
+directory. The photos are time-stamped and in .jpg format.
+"""
+
 
 __author__ = "Bailey Nozomu Hwa <hwab@janelia.hhmi.org>"
 __date__ = "$Aug 05, 2015, 3:36 PM$"
