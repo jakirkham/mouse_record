@@ -14,8 +14,10 @@ def main(*argv):
     )
     parser.add_argument(
         "time",
+        nargs='?',
         type=int,
-        help="Preview length"
+        default=15,
+        help="Preview length (default is 15 seconds)."
     )
     args = parser.parse_args(argv[1:])
     t = args.time
