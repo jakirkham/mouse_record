@@ -5,13 +5,11 @@
 Mouse Recorder
 ==============
 
-A cheap, modular, behavior recording program
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**A cheap, modular, behavior recording program**
 
 .. figure:: Mouserecord_logo.jpg
    :alt: Mouserecord\_logo.jpg
 
-   Mouserecord\_logo.jpg
 
 Purpose
 =======
@@ -23,8 +21,7 @@ press of a lever.
 Installation
 ============
 
-Installation requires
-```setuptools`` <https://pypi.python.org/pypi/setuptools>`__; install
+Installation requires setuptools_; install
 using the following command (may require ``sudo``):
 
 ::
@@ -78,6 +75,8 @@ An example is shown below:
 
 Also, as mentioned before, the program will end when a
 ``KeyboardInterrupt``\ (Ctrl + c) is entered into the terminal.
+
+.. _setuptools: https://pypi.python.org/pypi/setuptools
 
 .. |Code Health| image:: https://landscape.io/github/DudLab/mouse_record/master/landscape.svg?style=flat
    :target: https://landscape.io/github/DudLab/mouse_record/master
