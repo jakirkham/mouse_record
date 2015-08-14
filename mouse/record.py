@@ -78,8 +78,10 @@ def main(*argv):
     )
     parser.add_argument(
         "folder",
+        nargs='?',
         type=str,
-        help="mouse to be tested"
+        default=os.getcwd(),
+        help="where to save the data (default is current working directory)."
     )
     args = parser.parse_args(argv[1:])
 
