@@ -8,6 +8,10 @@ Overview
 The mouse-picture program takes a photo of the background, and saves it into
 the user-specified directory. The generated photos are time-stamped and in
 JPEG format.
+
+===============================================================================
+API
+===============================================================================
 """
 
 
