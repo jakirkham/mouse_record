@@ -6,6 +6,7 @@ __date__ = "$July 30, 2015 20:20:18 EDT$"
 from glob import glob
 from setuptools import setup, find_packages
 
+
 setup(
     name="mouse_recorder",
     version="0.0.1",
