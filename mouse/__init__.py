@@ -16,7 +16,7 @@ operates on a Raspberry Pi-based system, providing a cheaper alternative than
 conventional recording apparatus used in behavioral studies.
 
 ===============================================================================
-Building
+Standard Install
 ===============================================================================
 
 To install, use standard python installation procedure:
@@ -66,13 +66,6 @@ Enter the following into the terminal to install the program:
 ===============================================================================
 Testing
 ===============================================================================
-
-Testing of the program requires the installation of mock_ and nose_; both are
-automatically installed by the standard installation procedure:
-
-.. code-block:: sh
-
-    python setup.py install
 
 When testing the program, the user should move to the directory to where
 the ``mouse_record`` file is located. Then enter the following command:
