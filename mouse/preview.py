@@ -1,5 +1,19 @@
 from __future__ import print_function
 
+"""
+===============================================================================
+Overview
+===============================================================================
+
+The mouse-picture program shows a preview of the camera, as part of the setup
+of the Raspberry Pi module on the behavioral rig. The user can set the length
+of the preview and quit at any time, using the ``Ctrl +c`` command.
+
+===============================================================================
+API
+===============================================================================
+"""
+
 __author__ = "Bailey Nozomu Hwa <hwab@janelia.hhmi.org>"
 __date__ = "$July 30, 2015 20:20:18 EDT$"
 

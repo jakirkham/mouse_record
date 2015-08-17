@@ -1,10 +1,24 @@
 from __future__ import print_function
 
+"""
+===============================================================================
+Overview
+===============================================================================
+
+The mouse-picture program takes a photo of the background, and saves it into
+the user-specified directory. The generated photos are time-stamped and in
+JPEG format.
+
+===============================================================================
+API
+===============================================================================
+"""
+
+
 __author__ = "Bailey Nozomu Hwa <hwab@janelia.hhmi.org>"
 __date__ = "$Aug 05, 2015, 3:36 PM$"
 
 import argparse
-import io
 import picamera
 import datetime
 import os
