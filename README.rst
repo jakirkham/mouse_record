@@ -86,6 +86,8 @@ Picture Usage
 
 Execution of the program consists of the program name and a single
 argument, the directory in which the picture is to be saved into.
+If a directory is not specified, the current directory will be
+assumed.
 
 ::
 
@@ -96,6 +98,7 @@ Preview Usage
 
 Execution of the program consists of the program name and a single
 argument: the time desired length of the camera preview (in seconds).
+If the time is not specified, this will default to 15 seconds.
 Additionally, the user can exit at any time by entering ``Ctrl + c``
 
 ::
@@ -108,7 +111,8 @@ Recorder Usage
 Execution of the program consists of the program name and respectve
 arguments: time to record before trigger event (in seconds), time to
 record after (in seconds), and directory of the file to be saved into.
-An example is shown below:
+If a directory is not specified, the current directory will be
+assumed. An example is shown below:
 
 ::
 
