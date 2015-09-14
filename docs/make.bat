@@ -2,9 +2,13 @@
 
 REM Command file for Sphinx documentation
 
+if "%SPHINXAPIDOC%" == "" (
+	set SPHINXAPIDOC=sphinx-apidoc
+)
 if "%SPHINXBUILD%" == "" (
 	set SPHINXBUILD=sphinx-build
 )
+
 set BUILDDIR=_build
 set ALLSPHINXOPTS=-d %BUILDDIR%/doctrees %SPHINXOPTS% .
 set I18NSPHINXOPTS=%SPHINXOPTS% .
@@ -19,6 +23,7 @@ if "%1" == "help" (
 	:help
 	echo.Please use `make ^<target^>` where ^<target^> is one of
 	echo.  clean      to delete the build directory and all RST files except index.rst
+	echo.  rst        to build the RST files from the source directory
 	echo.  html       to make standalone HTML files
 	echo.  dirhtml    to make HTML files named index.html in directories
 	echo.  singlehtml to make a single large HTML file
@@ -68,7 +73,18 @@ if errorlevel 9009 (
 	exit /b 1
 )
 
+if "%1" == "rst" (
+	%SPHINXAPIDOC% -f -T -e -M -o . .. ../setup.py ../tests ../versioneer.py
+	if errorlevel 1 exit /b 1
+	echo.
+	echo.Build finished. The RST pages are in in the current directory.
+	goto end
+)
+
+
 if "%1" == "html" (
+	%SPHINXAPIDOC% -f -T -e -M -o . .. ../setup.py ../tests ../versioneer.py
+	if errorlevel 1 exit /b 1
 	%SPHINXBUILD% -b html %ALLSPHINXOPTS% %BUILDDIR%/html
 	if errorlevel 1 exit /b 1
 	echo.
@@ -77,6 +93,8 @@ if "%1" == "html" (
 )
 
 if "%1" == "dirhtml" (
+	%SPHINXAPIDOC% -f -T -e -M -o . .. ../setup.py ../tests ../versioneer.py
+	if errorlevel 1 exit /b 1
 	%SPHINXBUILD% -b dirhtml %ALLSPHINXOPTS% %BUILDDIR%/dirhtml
 	if errorlevel 1 exit /b 1
 	echo.
@@ -85,6 +103,8 @@ if "%1" == "dirhtml" (
 )
 
 if "%1" == "singlehtml" (
+	%SPHINXAPIDOC% -f -T -e -M -o . .. ../setup.py ../tests ../versioneer.py
+	if errorlevel 1 exit /b 1
 	%SPHINXBUILD% -b singlehtml %ALLSPHINXOPTS% %BUILDDIR%/singlehtml
 	if errorlevel 1 exit /b 1
 	echo.
@@ -93,6 +113,8 @@ if "%1" == "singlehtml" (
 )
 
 if "%1" == "pickle" (
+	%SPHINXAPIDOC% -f -T -e -M -o . .. ../setup.py ../tests ../versioneer.py
+	if errorlevel 1 exit /b 1
 	%SPHINXBUILD% -b pickle %ALLSPHINXOPTS% %BUILDDIR%/pickle
 	if errorlevel 1 exit /b 1
 	echo.
@@ -101,6 +123,8 @@ if "%1" == "pickle" (
 )
 
 if "%1" == "json" (
+	%SPHINXAPIDOC% -f -T -e -M -o . .. ../setup.py ../tests ../versioneer.py
+	if errorlevel 1 exit /b 1
 	%SPHINXBUILD% -b json %ALLSPHINXOPTS% %BUILDDIR%/json
 	if errorlevel 1 exit /b 1
 	echo.
@@ -109,6 +133,8 @@ if "%1" == "json" (
 )
 
 if "%1" == "htmlhelp" (
+	%SPHINXAPIDOC% -f -T -e -M -o . .. ../setup.py ../tests ../versioneer.py
+	if errorlevel 1 exit /b 1
 	%SPHINXBUILD% -b htmlhelp %ALLSPHINXOPTS% %BUILDDIR%/htmlhelp
 	if errorlevel 1 exit /b 1
 	echo.
@@ -118,6 +144,8 @@ if "%1" == "htmlhelp" (
 )
 
 if "%1" == "qthelp" (
+	%SPHINXAPIDOC% -f -T -e -M -o . .. ../setup.py ../tests ../versioneer.py
+	if errorlevel 1 exit /b 1
 	%SPHINXBUILD% -b qthelp %ALLSPHINXOPTS% %BUILDDIR%/qthelp
 	if errorlevel 1 exit /b 1
 	echo.
@@ -130,6 +158,8 @@ if "%1" == "qthelp" (
 )
 
 if "%1" == "devhelp" (
+	%SPHINXAPIDOC% -f -T -e -M -o . .. ../setup.py ../tests ../versioneer.py
+	if errorlevel 1 exit /b 1
 	%SPHINXBUILD% -b devhelp %ALLSPHINXOPTS% %BUILDDIR%/devhelp
 	if errorlevel 1 exit /b 1
 	echo.
@@ -138,6 +168,8 @@ if "%1" == "devhelp" (
 )
 
 if "%1" == "epub" (
+	%SPHINXAPIDOC% -f -T -e -M -o . .. ../setup.py ../tests ../versioneer.py
+	if errorlevel 1 exit /b 1
 	%SPHINXBUILD% -b epub %ALLSPHINXOPTS% %BUILDDIR%/epub
 	if errorlevel 1 exit /b 1
 	echo.
@@ -146,6 +178,8 @@ if "%1" == "epub" (
 )
 
 if "%1" == "latex" (
+	%SPHINXAPIDOC% -f -T -e -M -o . .. ../setup.py ../tests ../versioneer.py
+	if errorlevel 1 exit /b 1
 	%SPHINXBUILD% -b latex %ALLSPHINXOPTS% %BUILDDIR%/latex
 	if errorlevel 1 exit /b 1
 	echo.
@@ -154,6 +188,8 @@ if "%1" == "latex" (
 )
 
 if "%1" == "latexpdf" (
+	%SPHINXAPIDOC% -f -T -e -M -o . .. ../setup.py ../tests ../versioneer.py
+	if errorlevel 1 exit /b 1
 	%SPHINXBUILD% -b latex %ALLSPHINXOPTS% %BUILDDIR%/latex
 	cd %BUILDDIR%/latex
 	make all-pdf
@@ -164,6 +200,8 @@ if "%1" == "latexpdf" (
 )
 
 if "%1" == "latexpdfja" (
+	%SPHINXAPIDOC% -f -T -e -M -o . .. ../setup.py ../tests ../versioneer.py
+	if errorlevel 1 exit /b 1
 	%SPHINXBUILD% -b latex %ALLSPHINXOPTS% %BUILDDIR%/latex
 	cd %BUILDDIR%/latex
 	make all-pdf-ja
@@ -174,6 +212,8 @@ if "%1" == "latexpdfja" (
 )
 
 if "%1" == "text" (
+	%SPHINXAPIDOC% -f -T -e -M -o . .. ../setup.py ../tests ../versioneer.py
+	if errorlevel 1 exit /b 1
 	%SPHINXBUILD% -b text %ALLSPHINXOPTS% %BUILDDIR%/text
 	if errorlevel 1 exit /b 1
 	echo.
@@ -182,6 +222,8 @@ if "%1" == "text" (
 )
 
 if "%1" == "man" (
+	%SPHINXAPIDOC% -f -T -e -M -o . .. ../setup.py ../tests ../versioneer.py
+	if errorlevel 1 exit /b 1
 	%SPHINXBUILD% -b man %ALLSPHINXOPTS% %BUILDDIR%/man
 	if errorlevel 1 exit /b 1
 	echo.
@@ -190,6 +232,8 @@ if "%1" == "man" (
 )
 
 if "%1" == "texinfo" (
+	%SPHINXAPIDOC% -f -T -e -M -o . .. ../setup.py ../tests ../versioneer.py
+	if errorlevel 1 exit /b 1
 	%SPHINXBUILD% -b texinfo %ALLSPHINXOPTS% %BUILDDIR%/texinfo
 	if errorlevel 1 exit /b 1
 	echo.
@@ -198,6 +242,8 @@ if "%1" == "texinfo" (
 )
 
 if "%1" == "gettext" (
+	%SPHINXAPIDOC% -f -T -e -M -o . .. ../setup.py ../tests ../versioneer.py
+	if errorlevel 1 exit /b 1
 	%SPHINXBUILD% -b gettext %I18NSPHINXOPTS% %BUILDDIR%/locale
 	if errorlevel 1 exit /b 1
 	echo.
@@ -206,6 +252,8 @@ if "%1" == "gettext" (
 )
 
 if "%1" == "changes" (
+	%SPHINXAPIDOC% -f -T -e -M -o . .. ../setup.py ../tests ../versioneer.py
+	if errorlevel 1 exit /b 1
 	%SPHINXBUILD% -b changes %ALLSPHINXOPTS% %BUILDDIR%/changes
 	if errorlevel 1 exit /b 1
 	echo.
@@ -214,6 +262,8 @@ if "%1" == "changes" (
 )
 
 if "%1" == "linkcheck" (
+	%SPHINXAPIDOC% -f -T -e -M -o . .. ../setup.py ../tests ../versioneer.py
+	if errorlevel 1 exit /b 1
 	%SPHINXBUILD% -b linkcheck %ALLSPHINXOPTS% %BUILDDIR%/linkcheck
 	if errorlevel 1 exit /b 1
 	echo.
@@ -223,6 +273,8 @@ or in %BUILDDIR%/linkcheck/output.txt.
 )
 
 if "%1" == "doctest" (
+	%SPHINXAPIDOC% -f -T -e -M -o . .. ../setup.py ../tests ../versioneer.py
+	if errorlevel 1 exit /b 1
 	%SPHINXBUILD% -b doctest %ALLSPHINXOPTS% %BUILDDIR%/doctest
 	if errorlevel 1 exit /b 1
 	echo.
@@ -232,6 +284,8 @@ results in %BUILDDIR%/doctest/output.txt.
 )
 
 if "%1" == "xml" (
+	%SPHINXAPIDOC% -f -T -e -M -o . .. ../setup.py ../tests ../versioneer.py
+	if errorlevel 1 exit /b 1
 	%SPHINXBUILD% -b xml %ALLSPHINXOPTS% %BUILDDIR%/xml
 	if errorlevel 1 exit /b 1
 	echo.
@@ -240,6 +294,8 @@ if "%1" == "xml" (
 )
 
 if "%1" == "pseudoxml" (
+	%SPHINXAPIDOC% -f -T -e -M -o . .. ../setup.py ../tests ../versioneer.py
+	if errorlevel 1 exit /b 1
 	%SPHINXBUILD% -b pseudoxml %ALLSPHINXOPTS% %BUILDDIR%/pseudoxml
 	if errorlevel 1 exit /b 1
 	echo.
