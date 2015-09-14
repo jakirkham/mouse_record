@@ -18,6 +18,7 @@ if "%1" == "" goto help
 if "%1" == "help" (
 	:help
 	echo.Please use `make ^<target^>` where ^<target^> is one of
+	echo.  clean      to delete the build directory and all RST files except index.rst
 	echo.  html       to make standalone HTML files
 	echo.  dirhtml    to make HTML files named index.html in directories
 	echo.  singlehtml to make a single large HTML file
@@ -41,8 +42,15 @@ if "%1" == "help" (
 )
 
 if "%1" == "clean" (
+	move index.rst index.rst.saved
+	move readme.rst readme.rst.saved
+	move todo.rst todo.rst.saved
+	del /q /s *.rst
+	move index.rst.saved index.rst
+	move readme.rst.saved readme.rst
+	move todo.rst.saved todo.rst
 	for /d %%i in (%BUILDDIR%\*) do rmdir /q /s %%i
-	del /q /s %BUILDDIR%\*
+	del /q /s %BUILDDIR%
 	goto end
 )
 
