@@ -69,9 +69,9 @@ def main(*argv):
         Notes:
             These are the parameters of the arguments.
 
-            folder(str):                    File directory
-            x(int):                         Time to record before (in seconds)
-            y(int):                         Time to record after (in seconds)
+            * folder(str):                  File directory
+            * x(int):                       Time to recording before (seconds)
+            * y(int):                       Time to record after (seconds)
     """
 
     # Time to record before and after as well as directory are stored here
