@@ -23,6 +23,7 @@ I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
+	@echo "  clean      to delete the build directory and all RST files except index.rst"
 	@echo "  html       to make standalone HTML files"
 	@echo "  dirhtml    to make HTML files named index.html in directories"
 	@echo "  singlehtml to make a single large HTML file"
@@ -47,7 +48,14 @@ help:
 	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
 
 clean:
-	rm -rf $(BUILDDIR)/*
+	mv index.rst index.rst.saved
+	mv readme.rst readme.rst.saved
+	mv todo.rst todo.rst.saved
+	rm -f *.rst
+	mv index.rst.saved index.rst
+	mv readme.rst.saved readme.rst
+	mv todo.rst.saved todo.rst
+	rm -rf $(BUILDDIR)
 
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
