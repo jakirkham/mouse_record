@@ -33,6 +33,9 @@ class Trigger(object):
 
         Notes:
             Relies on GPIO ports on the RaspberryPi for event notification.
+
+        Attributes:
+            port(Optional[int]):            Description of `attr1`.
     """
 
     def __init__(self, port=27):
