@@ -17,6 +17,8 @@ Contents:
 
 Indices and tables
 ==================
+.. toctree::
+   todo
 
 * :ref:`genindex`
 * :ref:`modindex`
