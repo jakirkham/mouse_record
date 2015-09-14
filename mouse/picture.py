@@ -1,6 +1,6 @@
 from __future__ import print_function
 
-"""
+__doc__ = """
 ===============================================================================
 Overview
 ===============================================================================
@@ -26,17 +26,15 @@ import os
 
 def main(*argv):
     """
-       The program takes a photo of the background when run and saves it into a user-specified directory.
+        Takes a photo and saves it to a user-specified directory.
 
         Args:
             argv(str):                      Arguments are stored as a list
 
         Notes:
-            these are the parameters of the arguments.
+            These are the parameters of the arguments.
 
             folder(str):                    File directory
-
-
     """
 
     # Directory is stored here

@@ -1,6 +1,6 @@
 from __future__ import print_function
 
-"""
+__doc__ = """
 ===============================================================================
 Overview
 ===============================================================================
@@ -29,15 +29,21 @@ import os
 
 class Trigger(object):
     """
-    Class responsible for setting event trigger and its respective GPIO port
-    as an argument and waiting for updates.
+        Responsible for setting event trigger and waiting for updates.
+
+        Notes:
+            Relies on GPIO ports on the RaspberryPi for event notification.
+
+        Attributes:
+            port(int):                      Description of `attr1`.
     """
+
     def __init__(self, port=27):
         """
-        Function sets up GPIO port as argument.
+            Function sets up GPIO port as argument.
 
-        Args:
-            port(int):                  GPIO port of trigger
+            Args:
+                port(Optional[int]):        GPIO port of trigger
         """
         self.port = port
 
@@ -47,7 +53,7 @@ class Trigger(object):
 
     def wait(self):
         """
-        Function sets initiation of trigger event.
+            Function sets initiation of trigger event.
         """
 
         import RPi.GPIO as GPIO
@@ -57,19 +63,16 @@ class Trigger(object):
 def main(*argv):
     """
         Simple main function that performs event center recording.
-        Defines arguments:
 
         Args:
             argv(str):                      Arguments are stored as a list
 
         Notes:
-            these are the parameters of the arguments.
+            These are the parameters of the arguments.
 
             folder(str):                    File directory
             x(int):                         Time to record before (in seconds)
             y(int):                         Time to record after (in seconds)
-
-
     """
 
     # Time to record before and after as well as directory are stored here
