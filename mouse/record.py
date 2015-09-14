@@ -67,8 +67,6 @@ def main(*argv):
             folder(str):                    File directory
             x(int):                         Time to record before (in seconds)
             y(int):                         Time to record after (in seconds)
-
-
     """
 
     # Time to record before and after as well as directory are stored here
