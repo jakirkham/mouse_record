@@ -42,7 +42,7 @@ class Trigger(object):
             Function sets up GPIO port as argument.
 
             Args:
-                port(Optional[int]):        GPIO port of trigger
+                port(Optional[int]):        GPIO port of trigger.
         """
         self.port = port
 
