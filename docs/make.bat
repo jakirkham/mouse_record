@@ -81,7 +81,6 @@ if "%1" == "rst" (
 	goto end
 )
 
-
 if "%1" == "html" (
 	%SPHINXAPIDOC% -f -T -e -M -o . .. ../setup.py ../tests ../versioneer.py
 	if errorlevel 1 exit /b 1
