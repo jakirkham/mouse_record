@@ -1,3 +1,5 @@
+[![Code Health](https://landscape.io/github/DudLab/mouse_record/master/landscape.svg?style=flat)](https://landscape.io/github/DudLab/mouse_record/master)
+
 # Mouse Recorder
 
 ###A cheap, modular, behavior recording program
