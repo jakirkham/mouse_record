@@ -31,7 +31,7 @@ def main(*argv):
         Notes:
             These are the parameters of the arguments.
 
-            time(int):                      Preview length, in seconds
+            * time(int):                    Preview length, in seconds \
                                             (default is 15 seconds)
     """
 

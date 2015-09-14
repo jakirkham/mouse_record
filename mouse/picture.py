@@ -33,7 +33,7 @@ def main(*argv):
         Notes:
             These are the parameters of the arguments.
 
-            folder(str):                    File directory
+            * folder(str):                  File directory
     """
 
     # Directory is stored here

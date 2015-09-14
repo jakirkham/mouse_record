@@ -39,14 +39,15 @@ Enter the following into the terminal to install the program:
 .. code-block:: sh
 
     git clone https://github.com/bnhwa/mouse_record
+    cd mouse_record
     python setup.py develop
 
 -------------------------------------------------------------------------------
 Updating
 -------------------------------------------------------------------------------
 To update the program, first specify the directory to where the `mouse_record`
-file is saved to. Then, enter the ``git pull`` command.
-An example is provided as follows:
+file is saved to. Then, enter the ``git pull`` command. An example is provided
+as follows:
 
 .. code-block:: sh
 
@@ -172,7 +173,9 @@ Recorder Usage
 -------------------------------------------------------------------------------
 Execution of the program consists of the program name and respectve arguments:
 time to record before trigger event (in seconds), time to record after
-(in seconds), and directory of the file to be saved into.
+(in seconds), and directory of the file to be saved into. By default, this uses
+GPIO port ``27``. However, a different one could be selected using the ``-p``
+or ``--port`` option to specify it.
 An example is shown below:
 
 .. code-block:: sh

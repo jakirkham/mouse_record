@@ -34,7 +34,7 @@ class Trigger(object):
             Relies on GPIO ports on the RaspberryPi for event notification.
 
         Attributes:
-            port(int):                      Description of `attr1`.
+            port(int):                      GPIO port of trigger.
     """
 
     def __init__(self, port=27):
@@ -42,7 +42,7 @@ class Trigger(object):
             Function sets up GPIO port as argument.
 
             Args:
-                port(Optional[int]):        GPIO port of trigger
+                port(Optional[int]):        GPIO port of trigger.
         """
         self.port = port
 
@@ -69,9 +69,9 @@ def main(*argv):
         Notes:
             These are the parameters of the arguments.
 
-            folder(str):                    File directory
-            x(int):                         Time to record before (in seconds)
-            y(int):                         Time to record after (in seconds)
+            * folder(str):                  File directory
+            * x(int):                       Time to recording before (seconds)
+            * y(int):                       Time to record after (seconds)
     """
 
     # Time to record before and after as well as directory are stored here
