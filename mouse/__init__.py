@@ -97,23 +97,6 @@ For more build options, simply run the following command.
 Other build targets can be specified using the ``-b`` or ``--builder`` option.
 Beyond the standard options that Sphinx provides, we add the `pdf` option.
 
-To clean up the documentation built and all other build products, one can use
-the ``clean`` option. This will eliminate all intermediates used to build the
-documentation along with any other products ``clean`` would normally take care
-of. The syntax is shown below.
-
-.. code-block:: sh
-
-    python setup.py clean
-
-If this is not sufficient, and one wishes to eliminate the final documentation
-product this can be done with the flag ``-a`` or ``--all``. This adjustment to
-the syntax is shown below.
-
-.. code-block:: sh
-
-    python setup.py clean --all
-
 Alternatively, if one does not wish to use ``setup.py``, one can use a Makefile
 or ``make.bat`` on Windows in the ``docs/`` directory to generate
 documentation. To do this enter the ``docs/`` directory. A number of different
@@ -138,6 +121,26 @@ following command.
 .. code-block:: sh
 
     make clean
+
+===============================================================================
+Cleaning
+===============================================================================
+
+To clean up all build products, one can use the ``clean`` option. This will
+eliminate all intermediates used to build. This has been amended to include
+picking up documentation build intermediates. The syntax is shown below.
+
+.. code-block:: sh
+
+    python setup.py clean
+
+If this is not sufficient, and one wishes to eliminate the final products, as
+well. This can be done with the flag ``-a`` or ``--all``. This adjustment to
+the syntax is shown below.
+
+.. code-block:: sh
+
+    python setup.py clean --all
 
 ===============================================================================
 Usage
