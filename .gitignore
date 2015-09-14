@@ -5,6 +5,10 @@
 *.py[cod]
 *.egg-info
 
+# Build products
+build/
+dist/
+
 # Test coverage files
 .coverage
 
