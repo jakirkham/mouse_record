@@ -16,7 +16,7 @@ Purpose
 
 The program's is designed to record rodent behavior at specific
 intervals of time, based on the initiation of a trigger event (e.g., the
-press of a lever.
+press of a lever).
 
 Installation
 ============
