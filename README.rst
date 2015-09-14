@@ -59,6 +59,25 @@ For more build options, simply run the following command.
 Other build targets can be specified using the ``-b`` or ``--builder`` option.
 Beyond the standard options that Sphinx provides, we add the `pdf` option.
 
+Cleaning
+========
+
+To clean up the directory after building, one can use the ``clean`` option.
+This will eliminate all intermediates build products. The syntax is shown
+below.
+
+::
+
+    python setup.py clean
+
+If this is not sufficient, and one wishes to eliminate the final products this
+can be done with the flag ``-a`` or ``--all``. This adjustment to the syntax is
+shown below.
+
+::
+
+    python setup.py clean --all
+
 Usage
 =====
 
