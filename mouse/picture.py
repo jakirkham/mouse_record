@@ -19,7 +19,6 @@ __author__ = "Bailey Nozomu Hwa <hwab@janelia.hhmi.org>"
 __date__ = "$Aug 05, 2015, 3:36 PM$"
 
 import argparse
-import picamera
 import datetime
 import os
 
@@ -53,6 +52,7 @@ def main(*argv):
     if not os.path.exists(folder):
         os.makedirs(folder)
 
+    import picamera
     with picamera.PiCamera(framerate=90) as camera:
         j = datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S.%f")
         camera.capture(os.path.join(

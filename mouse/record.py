@@ -22,7 +22,6 @@ __date__ = "$July 30, 2015 20:20:18 EDT$"
 
 import argparse
 import io
-import picamera
 import datetime
 import os
 
@@ -114,6 +113,7 @@ def main(*argv):
     # sets up trigger event for the recordings, i.e., GPIO 27
     trigger = Trigger(args.port)
 
+    import picamera
     with picamera.PiCamera(framerate=90) as camera:
         try:
             # Creates directory/folder if the desired directory is nonexistent

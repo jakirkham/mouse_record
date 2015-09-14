@@ -19,7 +19,6 @@ __date__ = "$July 30, 2015 20:20:18 EDT$"
 
 import argparse
 import time
-import picamera
 
 
 def main(*argv):
@@ -49,6 +48,7 @@ def main(*argv):
     args = parser.parse_args(argv[1:])
     t = args.time
 
+    import picamera
     with picamera.PiCamera(framerate=90) as camera:
         try:
             camera.preview_fullscreen = False
