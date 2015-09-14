@@ -173,7 +173,9 @@ Recorder Usage
 -------------------------------------------------------------------------------
 Execution of the program consists of the program name and respectve arguments:
 time to record before trigger event (in seconds), time to record after
-(in seconds), and directory of the file to be saved into.
+(in seconds), and directory of the file to be saved into. By default, this uses
+GPIO port ``27``. However, a different one could be selected using the ``-p``
+or ``--port`` option to specify it.
 An example is shown below:
 
 .. code-block:: sh
