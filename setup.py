@@ -4,6 +4,7 @@ __author__ = "Bailey Hwa <hwab@janelia.hhmi.org>"
 __date__ = "$July 30, 2015 20:20:18 EDT$"
 
 from glob import glob
+
 from setuptools import setup, find_packages
 
 import versioneer
