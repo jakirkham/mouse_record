@@ -31,6 +31,7 @@ class Trigger(object):
     """
         Responsible for setting event trigger and waiting for updates.
     """
+
     def __init__(self, port=27):
         """
             Function sets up GPIO port as argument.
