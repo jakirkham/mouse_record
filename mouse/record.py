@@ -30,6 +30,9 @@ import os
 class Trigger(object):
     """
         Responsible for setting event trigger and waiting for updates.
+
+        Notes:
+            Relies on GPIO ports on the RaspberryPi for event notification.
     """
 
     def __init__(self, port=27):
