@@ -29,8 +29,7 @@ import os
 
 class Trigger(object):
     """
-        Class responsible for setting event trigger and its respective GPIO
-        port as an argument and waiting for updates.
+        Responsible for setting event trigger and waiting for updates.
     """
     def __init__(self, port=27):
         """
