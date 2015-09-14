@@ -54,8 +54,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'mouse_recorder'
-copyright = u'2015, Bailey Hwa'
 author = u'Bailey Hwa'
+copyright = u'2015, ' + author
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -189,7 +189,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'mouse_recorderdoc'
+htmlhelp_basename = project + 'doc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -209,8 +209,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'mouse_recorder.tex', u'mouse\\_recorder Documentation',
-   u'Bailey Hwa', 'manual'),
+  (master_doc, project + '.tex', project + u' Documentation',
+   author, 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -239,8 +239,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'mouse_recorder', u'mouse_recorder Documentation',
-     [u'Bailey Hwa'], 1)
+    (master_doc, project, project + u' Documentation',
+     [author], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -253,8 +253,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'mouse_recorder', u'mouse_recorder Documentation',
-   u'Bailey Hwa', 'mouse_recorder', 'One line description of project.',
+  (master_doc, project, project + u' Documentation',
+   author, project, 'One line description of project.',
    'Miscellaneous'),
 ]
 
