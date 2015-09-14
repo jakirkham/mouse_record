@@ -114,8 +114,8 @@ An example is shown below:
 
     sudo mouse-record 2 2 /home/pi/Desktop
 
-Also, as mentioned before, the program will end when a
-``KeyboardInterrupt``\ (Ctrl + c) is entered into the terminal.
+Also, as mentioned before, the program will end when a ``Ctrl + c` is
+entered into the terminal.
 
 .. _setuptools: https://pypi.python.org/pypi/setuptools
 
