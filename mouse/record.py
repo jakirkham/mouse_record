@@ -57,7 +57,6 @@ class Trigger(object):
 def main(*argv):
     """
         Simple main function that performs event center recording.
-        Defines arguments:
 
         Args:
             argv(str):                      Arguments are stored as a list
