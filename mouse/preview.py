@@ -23,6 +23,19 @@ import picamera
 
 
 def main(*argv):
+    """
+        Takes a photo and saves it to a user-specified directory.
+
+        Args:
+            argv(str):                      Arguments are stored as a list
+
+        Notes:
+            These are the parameters of the arguments.
+
+            time(int):                      Preview length, in seconds
+                                            (default is 15 seconds)
+    """
+
     parser = argparse.ArgumentParser(
         description="Takes camera preview. Exit using `Ctrl + c`."
     )
