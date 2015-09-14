@@ -66,5 +66,5 @@ ignore-paths:
     - docs
     - examples
     - tests
-    - nanshe/_version.py
+    - mouse/_version.py
     - versioneer.py
