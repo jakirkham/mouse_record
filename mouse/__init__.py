@@ -39,6 +39,7 @@ Enter the following into the terminal to install the program:
 .. code-block:: sh
 
     git clone https://github.com/bnhwa/mouse_record
+    cd mouse_record
     python setup.py develop
 
 -------------------------------------------------------------------------------
