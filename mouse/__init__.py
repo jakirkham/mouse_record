@@ -75,6 +75,33 @@ the ``mouse_record`` file is located. Then enter the following command:
     python setup.py tests
 
 ===============================================================================
+Documentation
+===============================================================================
+
+Documentation can be built from source on any platform easily. To do this enter
+the ``docs/`` directory. A number of different formats can be used. However,
+the design target is HTML. To build the HTML docs, enter the following command.
+
+.. code-block:: sh
+
+    make html
+
+Then, open the file ``_build/html/index.html`` within the ``docs/`` directory.
+
+A list of other build targets is provided by running the following command.
+
+.. code-block:: sh
+
+    make help
+
+If you wish to clean all of the generated documentation, simply run the
+following command.
+
+.. code-block:: sh
+
+    make clean
+
+===============================================================================
 Usage
 ===============================================================================
 
