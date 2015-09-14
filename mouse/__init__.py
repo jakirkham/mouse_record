@@ -46,8 +46,8 @@ Enter the following into the terminal to install the program:
 Updating
 -------------------------------------------------------------------------------
 To update the program, first specify the directory to where the `mouse_record`
-file is saved to. Then, enter the ``git pull`` command.
-An example is provided as follows:
+file is saved to. Then, enter the ``git pull`` command. An example is provided
+as follows:
 
 .. code-block:: sh
 
