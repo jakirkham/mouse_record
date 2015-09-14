@@ -55,6 +55,7 @@ master_doc = 'index'
 # General information about the project.
 project = u'mouse_recorder'
 copyright = u'2015, Bailey Hwa'
+author = u'Bailey Hwa'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
