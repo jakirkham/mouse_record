@@ -26,8 +26,8 @@ import os
 
 def main(*argv):
     """
-       The program takes a photo of the background when run and saves it into
-       a user-specified directory.
+        The program takes a photo of the background when run and saves it into
+        a user-specified directory.
 
         Args:
             argv(str):                      Arguments are stored as a list
