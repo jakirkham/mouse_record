@@ -9,8 +9,10 @@ Welcome to mouse_recorder's documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :glob:
 
+   README <readme>
+   mouse*
 
 
 Indices and tables
