@@ -1,0 +1,10 @@
+# Borrowed from here ( https://www.tomaz.me/2013/12/02/running-travis-ci-tests-on-arm.html ).
+
+language: c++
+
+env:
+  - ARCH=x64
+  - ARCH=arm
+
+script:
+  - "bash -ex .travis-ci.sh"
