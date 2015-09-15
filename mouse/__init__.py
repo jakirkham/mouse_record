@@ -1,11 +1,11 @@
 """
-``Mouse Recorder`` package, a cheap, modular, behavior recording program
+``Mouse Record`` package, a cheap, modular, behavior recording program
 
 ===============================================================================
 Overview
 ===============================================================================
 
-The ``Mouse Recorder`` package is designed for the ease of recording and
+The ``Mouse Record`` package is designed for the ease of recording and
 singling out desired behavior of rodents, namely the events of interest in
 reward-stimulus studies. Using these events as triggers (e.g., the press
 of a lever), the program records the user-specified time before and after
@@ -169,7 +169,7 @@ Additionally, the user can exit at any time by entering ``Ctrl + c``
     mouse-preview 60
 
 -------------------------------------------------------------------------------
-Recorder Usage
+Record Usage
 -------------------------------------------------------------------------------
 Execution of the program consists of the program name and respectve arguments:
 time to record before trigger event (in seconds), time to record after
