@@ -2,7 +2,7 @@
 
 --------------
 
-Mouse Recorder
+Mouse Record
 ==============
 
 **A cheap, modular, behavior recording program**
@@ -105,7 +105,7 @@ Additionally, the user can exit at any time by entering ``Ctrl + c``
 
     mouse-preview 60
 
-Recorder Usage
+Record Usage
 --------------
 
 Execution of the program consists of the program name and respectve
