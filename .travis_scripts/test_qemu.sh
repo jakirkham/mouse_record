@@ -55,8 +55,6 @@ function setup_arm_chroot {
 if [ -e "/.chroot_is_done" ]; then
   # We are inside ARM chroot
   echo "Running inside chrooted environment"
-
-  . ./envvars.sh
 else
   if [ "${ARCH}" = "arm" ]; then
     # ARM test run, need to set up chrooted environment first
