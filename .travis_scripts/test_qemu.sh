@@ -19,7 +19,6 @@ TEST_COMMAND="python setup.py test"
 function setup_arm_chroot {
     # Host dependencies
     sudo apt-get update -y
-    sudo apt-get upgrade -y
     sudo apt-get install -qq -y ${HOST_DEPENDENCIES}
 
     # Create chrooted environment
