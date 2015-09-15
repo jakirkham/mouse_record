@@ -5,7 +5,6 @@ sudo: required
 language: c++
 
 env:
-  - ARCH=x64
   - ARCH=arm
 
 script:
