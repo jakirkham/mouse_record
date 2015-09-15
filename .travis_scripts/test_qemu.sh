@@ -15,7 +15,7 @@ GUEST_DEPENDENCIES="sudo curl python python-dev git"
 
 # Command used to run the tests
 # Try to pick up libmmal.so for picamera by specifying this path.
-TEST_COMMAND="export LIBRARY_PATH=/opt/vc/lib && python setup.py test"
+TEST_COMMAND="python setup.py test"
 
 function setup_arm_chroot {
     # Host dependencies
@@ -70,4 +70,5 @@ fi
 echo "Running tests"
 echo "Environment: $(uname -a)"
 
+export LIBRARY_PATH=/opt/vc/lib
 ${TEST_COMMAND}
