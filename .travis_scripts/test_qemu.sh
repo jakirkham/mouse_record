@@ -39,6 +39,7 @@ function setup_arm_chroot {
 
     # Install dependencies inside chroot
     sudo chroot ${CHROOT_DIR} apt-get update -y
+    sudo chroot ${CHROOT_DIR} apt-get upgrade -y
     sudo chroot ${CHROOT_DIR} apt-get --allow-unauthenticated install \
         -qq -y ${GUEST_DEPENDENCIES}
 
