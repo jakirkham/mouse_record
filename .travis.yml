@@ -7,4 +7,4 @@ env:
   - ARCH=arm
 
 script:
-  - "bash -ex .travis-ci.sh"
+  - "bash -ex .travis_scripts/test_qemu.sh"
