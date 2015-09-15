@@ -91,7 +91,7 @@ setup(
     packages=find_packages(exclude=["tests*"]),
     cmdclass=versioneer.get_cmdclass(),
     install_requires=["picamera >=1.0", "RPi.GPIO >=0.5.11"],
-    tests_require=["nose", "mock"],
+    tests_require=["nose", "mock", "pbr <1.7.0"],
     test_suite="nose.collector",
     zip_safe=True
 )
