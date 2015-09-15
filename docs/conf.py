@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# mouse_recorder documentation build configuration file, created by
+# mouse_record documentation build configuration file, created by
 # sphinx-quickstart on Mon Sep 14 15:31:14 2015.
 #
 # This file is execfile()d with the current directory set to its
@@ -55,7 +55,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'mouse_recorder'
+project = u'mouse_record'
 author = u'Bailey Hwa'
 copyright = u'2015, ' + author
 
