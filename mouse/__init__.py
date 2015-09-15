@@ -73,7 +73,7 @@ the ``mouse_record`` file is located. Then enter the following command:
 
 .. code-block:: sh
 
-    python setup.py tests
+    python setup.py test
 
 ===============================================================================
 Documentation
