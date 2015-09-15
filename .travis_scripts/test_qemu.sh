@@ -43,6 +43,7 @@ function setup_arm_chroot {
     sudo chroot ${CHROOT_DIR} apt-get --allow-unauthenticated install \
         -qq -y ${GUEST_DEPENDENCIES}
     sudo chroot ${CHROOT_DIR} bash -c 'curl https://bootstrap.pypa.io/ez_setup.py | python'
+    sudo chroot ${CHROOT_DIR} bash -c 'curl https://bootstrap.pypa.io/get-pip.py | python'
 
     # Create build dir and copy travis build files to our chroot environment
     sudo mkdir -p ${CHROOT_DIR}/${TRAVIS_BUILD_DIR}
