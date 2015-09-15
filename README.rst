@@ -35,7 +35,7 @@ Test the program using the following command:
 
 ::
 
-    python setup.py tests
+    python setup.py test
 
 Documentation
 =============
