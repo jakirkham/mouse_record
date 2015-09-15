@@ -72,14 +72,14 @@ elif sys.argv[1] == "clean":
             print("'build/sphinx' does not exist -- can't clean it")
 elif sys.argv[1] == "develop":
     if (len(sys.argv) > 2) and (sys.argv[2] in ["-u", "--uninstall"]):
-        if os.path.exists("mouse_recorder.egg-info"):
-            print("removing 'mouse_recorder.egg-info'")
-            shutil.rmtree("mouse_recorder.egg-info")
+        if os.path.exists("mouse_record.egg-info"):
+            print("removing 'mouse_record.egg-info'")
+            shutil.rmtree("mouse_record.egg-info")
         else:
-            print("'mouse_recorder.egg-info' does not exist -- can't clean it")
+            print("'mouse_record.egg-info' does not exist -- can't clean it")
 
 setup(
-    name="mouse_recorder",
+    name="mouse_record",
     version=versioneer.get_version(),
     description="An Event Triggered Recorder",
     url="https://github.com/DudLab/mouse_record",
