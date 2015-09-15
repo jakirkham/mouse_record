@@ -14,7 +14,7 @@ HOST_DEPENDENCIES="debootstrap qemu-user-static binfmt-support sbuild"
 GUEST_DEPENDENCIES="git sudo curl python python-setuptools"
 
 # Command used to run the tests
-TEST_COMMAND="(curl https://bootstrap.pypa.io/ez_setup.py | python) && python setup.py test"
+TEST_COMMAND="python setup.py test"
 
 function setup_arm_chroot {
     # Host dependencies
