@@ -10,3 +10,10 @@ env:
 
 script:
   - "bash -ex .travis_scripts/test_qemu.sh"
+
+notifications:
+  email:
+    on_success: always
+    on_failure: always
+    recipients:
+      - conv.80rirk4pw5tw57@fleep.io
