@@ -14,7 +14,8 @@ HOST_DEPENDENCIES="debootstrap qemu-user-static binfmt-support sbuild"
 GUEST_DEPENDENCIES="sudo curl python python-dev git"
 
 # Command used to run the tests
-TEST_COMMAND="python setup.py test"
+# Try to pick up libmmal.so for picamera by specifying this path.
+TEST_COMMAND="LIBRARY_PATH=/opt/vc/lib python setup.py test"
 
 function setup_arm_chroot {
     # Host dependencies
